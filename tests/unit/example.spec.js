@@ -1,21 +1,20 @@
 import { shallowMount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld.vue'
+import AboutPage from '@/views/AboutPage.vue'
+import HomePage from '@/views/HomePage.vue'
 
-describe('HelloWorld.vue', () => {
+describe('testing for simple data to render from home and about pages in vue', () => {
   it('renders props.msg when passed', () => {
-    const msg = 'new message'
-    const wrapper = shallowMount(HelloWorld, {
-      propsData: { msg }
-    })
+    const msg = 'This is an about page'
+    const wrapper = shallowMount(AboutPage)
     expect(wrapper.text()).toMatch(msg)
   })
 
   it('renders h3 message with "Installed CLI Plugins"', () => {
-    const msg = 'Installed CLI Plugins'
-    const wrapper = shallowMount(HelloWorld, {
+    const msg = 'This is HomePage'
+    const wrapper = shallowMount(HomePage, {
       propsdata: { msg }
     })
-    const elements_h3 = wrapper.findAll('h3').wrappers
-    expect(elements_h3[0].text()).toBe(msg)
+    const elements_h1 = wrapper.find('h1')
+    expect(elements_h1.text()).toBe(msg)
   })
 })
