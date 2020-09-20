@@ -1,32 +1,48 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <NavigationPage />
     </div>
     <router-view />
   </div>
 </template>
 
+<script>
+import NavigationPage from "@/components/NavigationPage";
+export default {
+  name: "App",
+  components: {
+    NavigationPage,
+  },
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  width: 1400px;
+  min-height: 600px;
+  background: linear-gradient(
+      180deg,
+      #bae2cf 0%,
+      rgba(167, 214, 197, 0.67) 68.75%,
+      rgba(23, 118, 72, 0) 100%
+    ),
+    #e8e8e8;
+  mix-blend-mode: normal;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
+/* #nav a {
   font-weight: bold;
   color: #2c3e50;
 }
 
 #nav a.router-link-exact-active {
   color: #42b983;
-}
+} */
 </style>
