@@ -1,0 +1,31 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "name": "Yoga with karan",
+      "price": "300",
+      "seats_available": "35",
+      "type": "fitness",
+      "duration": "2 hours",
+      "location": "stockholm"
+    },
+    {
+      "id": "2",
+      "name": "Marthon Race",
+      "price": "free",
+      "seats_available": "300",
+      "type": "fitness",
+      "duration": "2 hours",
+      "location": "stockholm"
+    },
+    {
+      "id": "3",
+      "name": "Dinner Table",
+      "price": "800",
+      "seats_available": "35",
+      "type": "Food",
+      "duration": "4 hours",
+      "location": "stockholm"
+    }
+  ]
+}
