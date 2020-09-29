@@ -19,6 +19,7 @@ describe("App.vue", () => {
         }
 
         actions = {
+            loadEvents: jest.fn(),
 
         }
 
@@ -42,5 +43,10 @@ describe("App.vue", () => {
         await wrapper.vm.$nextTick()
 
         expect(wrapper.findComponent(EventsPage).exists()).toBe(true)
+    })
+    it('calls store action loadEvents when we render the eventspage', async () => {
+
+        // const wrapper = shallowMount(EventsPage, { store, localVue })
+        // expect(actions.loadEvents).toHaveBeenCalled()
     })
 })
