@@ -1,5 +1,5 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-import App from '@/App.vue'
+import HomePage from '@/views/HomePage.vue'
 import Vuex from 'vuex'
 
 const localVue = createLocalVue()
@@ -17,9 +17,34 @@ describe('products', () => {
 
     beforeEach(() => {
         state = {
+            events: [{
+                id: "10",
+                name: "Water Diving",
+                price: "800",
+                seats_available: "50",
+                type: "Water games",
+                duration: "12 hours",
+                location: "stockholm",
+                image: "waterdiving1.jpg",
+                start_time: "10:00",
+                available_date: "2020-10-06"
+            },
+            {
+                id: "11",
+                name: "Water Diving",
+                price: "800",
+                seats_available: "50",
+                type: "Water games",
+                duration: "12 hours",
+                location: "stockholm",
+                image: "waterdiving1.jpg",
+                start_time: "10:00",
+                available_date: "2020-10-06"
+            }]
         }
 
         actions = {
+            loadEvents: jest.fn()
 
         }
 
@@ -30,11 +55,11 @@ describe('products', () => {
 
     })
     test('mocking the axios call to get products should work', async () => {
-        const wrapper = shallowMount(App, {
+        const wrapper = shallowMount(HomePage, {
             localVue,
             store
         });
         await wrapper.vm.$nextTick();
-        expect(wrapper.vm.products.length).toBe(1);
+        expect(wrapper.vm.events.length).toBe(2);
     })
 })
