@@ -16,9 +16,14 @@
         <h4>Date : {{ event.available_date }}</h4>
         <h4>Location : {{ event.location }}</h4>
         <h4>Start time : {{ event.start_time }}</h4>
-        <button class="event-button" @click="bookEvent">
-          Book Event
-        </button>
+        <div class="event-buttons">
+          <button class="event-button1" @click="bookEvent">
+            Book Event
+          </button>
+          <button class="event-button2" @click="delete_event(event)">
+            Delete Event
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -36,6 +41,12 @@ export default {
   methods: {
     bookEvent() {
       this.$router.push("/signup");
+    },
+    delete_event(event) {
+      this.$store.dispatch("deleteEvent", event.id);
+      setTimeout(() => {
+        this.$router.push("/events");
+      }, 5000);
     },
   },
 };
@@ -95,7 +106,10 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.event-button {
+.event-buttons {
+  display: flex;
+}
+.event-button1 {
   color: Black;
   font-size: 18px;
   background: white;
@@ -107,10 +121,28 @@ export default {
   cursor: pointer;
   margin: 30px;
 }
-.event-button:hover {
+.event-button1:hover {
   background: gray;
 }
-.event-button:active {
+.event-button1:active {
+  border-radius: 12.5px;
+}
+.event-button2 {
+  color: Black;
+  font-size: 18px;
+  background: grey;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  padding: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 30px;
+}
+.event-button2:hover {
+  background: white;
+}
+.event-button2:active {
   border-radius: 12.5px;
 }
 </style>

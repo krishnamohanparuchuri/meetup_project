@@ -43,7 +43,10 @@ export default {
   computed: mapState(["events"]),
   methods: {
     eventDescription(event) {
-      this.$router.push(`/events/${event.id}`, event);
+      this.$router.push({
+        name: "EventDescription",
+        params: { id: event.id, event },
+      });
     },
   },
 };

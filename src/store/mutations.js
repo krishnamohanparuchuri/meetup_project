@@ -11,14 +11,18 @@ export const mutations = {
         state.event = event_desc
     },
     ADD_EVENT(state, event) {
-        state.events = this.state.events.push(event)
-        console.log(state.events.length)
+        console.log(event)
+        state.events.push(event)
+        console.log(this.state.events)
 
     },
     ADD_USER(state, user) {
-        const add_user = this.state.users.push(user);
-        console.log(add_user)
-        state.users = add_user;
+        state.users.push(user)
+    },
+    DELETE_EVENT(state, id) {
+        const index = state.events.find((event) => event.id === id)
+        state.events.splice(index, 1)
+        console.log(this.state.events)
     },
     TOGGLE_SUBMITTED(state) {
         state.submitted = true;
