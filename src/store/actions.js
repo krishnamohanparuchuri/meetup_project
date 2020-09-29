@@ -17,7 +17,10 @@ export const actions = {
     addUser(context, user) {
         context.commit('ADD_USER', user)
     },
-    async addEvent(context, event) {
-        await context.commit('ADD_EVENT', event)
+    addEvent(context, event) {
+        context.commit('ADD_EVENT', event)
+    },
+    deleteEvent(context, event_id) {
+        context.commit('DELETE_EVENT', event_id)
     }
 }

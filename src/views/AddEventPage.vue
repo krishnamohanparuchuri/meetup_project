@@ -1,7 +1,7 @@
 <template>
   <div class="addevent-container">
     <h1 class="addevent-header">Add new Event</h1>
-    <form @submit.prevent="addEvent()" class="event-form">
+    <form @submit.prevent="addnewEvent()" class="event-form">
       <label for="name">Name of the Event</label>
       <input type="text" placeholder="event name" v-model="event.name" />
       <label for="date">Date</label>
@@ -47,7 +47,7 @@ export default {
     };
   },
   methods: {
-    addEvent() {
+    addnewEvent() {
       this.$store.dispatch("addEvent", this.event);
       setTimeout(() => {
         this.$router.push("/events");

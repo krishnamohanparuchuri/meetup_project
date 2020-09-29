@@ -37,7 +37,7 @@ describe("App.vue", () => {
             store
         })
 
-        router.push("/events/:id")
+        router.push("/event/:id")
         await wrapper.vm.$nextTick()
 
         expect(wrapper.findComponent(EventDescription).exists()).toBe(true)
