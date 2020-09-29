@@ -7,11 +7,20 @@
       </router-link>
     </div>
     <div class="nav-right">
-      |
-      <router-link to="/about">About</router-link>
-      <router-link to="/events">Events</router-link>
-      <router-link to="/contact">Contact Us</router-link>
-      <router-link to="/signup">Sign Up</router-link>
+      <ul class="nav-links">
+        <li>
+          <router-link to="/about">About</router-link>
+        </li>
+        <li>
+          <router-link to="/events">Events</router-link>
+        </li>
+        <li>
+          <router-link to="/contact">ContactUs</router-link>
+        </li>
+        <li>
+          <router-link to="/signup">Signup</router-link>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -22,7 +31,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .nav-container {
   display: flex;
   flex-direction: row;
@@ -68,5 +77,43 @@ export default {
   align-items: center;
 
   color: #000000;
+}
+
+.nav-right {
+  width: 800px;
+  font-size: 32px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-items: flex-end;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+li :hover {
+  color: gray;
+}
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
 }
 </style>

@@ -1,5 +1,9 @@
-import { shallowMount } from '@vue/test-utils';
+import { shallowMount, createLocalVue } from '@vue/test-utils';
 import App from '@/App.vue'
+import Vuex from 'vuex'
+
+const localVue = createLocalVue()
+localVue.use(Vuex)
 
 
 jest.mock('axios', () => ({
@@ -7,9 +11,30 @@ jest.mock('axios', () => ({
 }));
 
 describe('products', () => {
-    test('mocking the axios call to get products shuold work', async () => {
-        // const wrapper = shallowMount(App);
-        // await wrapper.vm.$nextTick();
-        // expect(wrapper.vm.products.length).toBe(1);
+    let actions
+    let state
+    let store
+
+    beforeEach(() => {
+        state = {
+        }
+
+        actions = {
+
+        }
+
+        store = new Vuex.Store({
+            state,
+            actions
+        })
+
+    })
+    test('mocking the axios call to get products should work', async () => {
+        const wrapper = shallowMount(App, {
+            localVue,
+            store
+        });
+        await wrapper.vm.$nextTick();
+        expect(wrapper.vm.products.length).toBe(1);
     })
 })
