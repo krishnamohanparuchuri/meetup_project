@@ -1,5 +1,6 @@
+import events from '../events/events'
 export const state = {
-    events: [],
+    events,
     users: [],
     submitted: false,
     event: {},

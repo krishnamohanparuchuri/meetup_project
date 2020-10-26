@@ -1,0 +1,148 @@
+const events = [
+    {
+        id: "1",
+        name: "Yoga with karan",
+        price: "300",
+        seats_available: "35",
+        type: "Fitness",
+        duration: "2 hours",
+        location: "stockholm",
+        image: "yoga1.jpg",
+        start_time: "10:00",
+        available_date: "2020-10-06"
+    },
+    {
+        id: "2",
+        name: "Marthon Race",
+        price: "free",
+        seats_available: "300",
+        type: "Fitness",
+        duration: "2 hours",
+        location: "stockholm",
+        image: "marthon1.jpg",
+        start_time: "10:00",
+        available_date: "2020-10-06"
+    },
+    {
+        id: "3",
+        name: "Dance concert",
+        price: "400",
+        seats_available: "60",
+        type: "Dance and Music",
+        duration: "4 hours",
+        location: "stockholm",
+        image: "dance1.jpg",
+        start_time: "10:00",
+        available_date: "2020-10-06"
+    },
+    {
+        id: "4",
+        name: "Water surfing",
+        price: "1500",
+        seats_available: "35",
+        type: "Adventure",
+        duration: "8 hours",
+        location: "stockholm",
+        image: "cannon1.jpg",
+        start_time: "10:00",
+        available_date: "2020-10-06"
+    },
+    {
+        id: "5",
+        name: "Para glidding",
+        price: "1500",
+        seats_available: "20",
+        type: "Entertainment",
+        duration: "8 hours",
+        location: "stockholm",
+        image: "glidder1.jpg",
+        start_time: "10:00",
+        available_date: "2020-10-06"
+    },
+    {
+        id: "6",
+        name: "Music concert",
+        price: "500",
+        seats_available: "150",
+        type: "Concerts",
+        duration: "4 hours",
+        location: "stockholm",
+        image: "musicconcert1.jpg",
+        start_time: "10:00",
+        available_date: "2020-10-06"
+    },
+    {
+        id: "7",
+        name: "Night concert",
+        price: "500",
+        seats_available: "150",
+        type: "Concerts",
+        duration: "4 hours",
+        location: "stockholm",
+        image: "nightconcert1.jpg",
+        start_time: "10:00",
+        available_date: "2020-10-06"
+    },
+    {
+        id: "8",
+        name: "Rock climbing",
+        price: "500",
+        seats_available: "150",
+        type: "Adventure",
+        duration: "4 hours",
+        location: "stockholm",
+        image: "rockclimbing1.jpg",
+        start_time: "10:00",
+        available_date: "2020-10-06"
+    },
+    {
+        id: "9",
+        name: "Water adventure",
+        price: "1200",
+        seats_available: "50",
+        type: "Water games",
+        duration: "12 hours",
+        location: "stockholm",
+        image: "wateradventure1.jpg",
+        start_time: "10:00",
+        available_date: "2020-10-06"
+    },
+    {
+        id: "10",
+        name: "Water Diving",
+        price: "800",
+        seats_available: "50",
+        type: "Water games",
+        duration: "12 hours",
+        location: "stockholm",
+        image: "waterdiving1.jpg",
+        start_time: "10:00",
+        available_date: "2020-10-06"
+    },
+    {
+        id: "11",
+        name: "Water surfing",
+        price: "1200",
+        seats_available: "50",
+        type: "Water games",
+        duration: "12 hours",
+        location: "stockholm",
+        image: "waterslidding1.jpg",
+        start_time: "10:00",
+        available_date: "2020-10-06"
+    },
+    {
+        id: "12",
+        name: "Water surfing",
+        price: "800",
+        seats_available: "50",
+        type: "Water games",
+        duration: "12 hours",
+        location: "stockholm",
+        image: "waterslidding2.jpg",
+        start_time: "10:00",
+        available_date: "2020-10-06"
+    }
+]
+
+export default events;
